@@ -4,6 +4,7 @@ import Title from '../Title/Title';
 import BackgroundTitle from '../../assets/backgroundTitle.svg';
 import BackgroundTitleResponsive from '../../assets/backgroundTitleResponsive.svg';
 import Container from '@material-ui/core/Container';
+import More from '../More/More';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         title: {
@@ -11,7 +12,7 @@ const useStyles = makeStyles((theme: Theme) =>
                 backgroundImage: `url(${BackgroundTitleResponsive})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center top',
-                height: '1000px',
+                height: '855px',
             },
             [theme.breakpoints.up('md')]: {
                 backgroundImage: `url(${BackgroundTitle})`,
@@ -43,7 +44,9 @@ const Home = () => {
                 </Container>
             </section>
             <section className={classes.more}>
-                <Container>dss</Container>
+                <Container>
+                    <More />
+                </Container>
             </section>
         </div>
     );
