@@ -1,29 +1,30 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        button: {
-            borderRadius: 40,
-            borderColor: '#7C85FF',
-            '&:hover': {
-                backgroundColor: '#7C85FF',
-            },
-            color: '#fff',
-            padding: '15px 15px 15px 100px',
-            display: 'flex',
-            justifyContent: 'flex-start',
-        },
-    })
-);
-
 interface ButtonProps {
     label?: string;
     image?: string;
     onClickFrame?: () => void;
+    selected?: boolean;
 }
-const MuiButton = ({ label, image, onClickFrame }: ButtonProps) => {
-    const classes = useStyles();
+const MuiButton = ({ label, image, onClickFrame, selected }: ButtonProps) => {
+    const useStyles = makeStyles((theme: Theme) =>
+        createStyles({
+            button: {
+                borderRadius: 40,
+                borderColor: '#7C85FF',
+                backgroundColor: selected ? '#7C85FF' : '',
+                '&:hover': {
+                    backgroundColor: '#7C85FF',
+                },
+                color: '#fff',
+                padding: '15px 15px 15px 100px',
+                display: 'flex',
+                justifyContent: 'flex-start',
+            },
+        })
+    );
+    const classes = useStyles(selected);
 
     return (
         <Button

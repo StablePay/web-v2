@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
-
+import styled from 'styled-components';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import GasStation from '../../assets/gasStation.svg';
+import GasAnimated from '../../assets/GasStationAnimate.svg';
+import FlashAnimated from '../../assets/flasAnimated.svg';
+import LockAnimated from '../../assets/secureAnimate.svg';
+import SocialAnimated from '../../assets/socialAnimated.svg';
 import Flash from '../../assets/flash.svg';
 import Lock from '../../assets/lock.svg';
 import Social from '../../assets/social.svg';
-import Frame1 from '../../assets/frame1.svg';
+import Frame1 from '../../assets/Frame.svg';
 import Frame from './Frame';
 import Frame2 from './Frame2';
 import Frame3 from './Frame3';
@@ -39,11 +43,6 @@ const useStyles = makeStyles((theme: Theme) =>
             padding: '15px 15px 15px 100px',
             display: 'flex',
             justifyContent: 'flex-start',
-        },
-        div: {
-            backgroundImage: `url(${Frame1})`,
-            backgroundRepeat: 'no-repeat',
-            height: 500,
         },
     })
 );
@@ -80,26 +79,30 @@ export default function More() {
                 <Grid item xs={4}>
                     <MuiButton
                         label="tnx with low gas costs"
-                        image={GasStation}
+                        image={selectedFrame === 1 ? GasAnimated : GasStation}
                         onClickFrame={() => onClickFrame(1)}
+                        selected={selectedFrame === 1 ? true : false}
                     />
                     <br />
                     <MuiButton
                         label=" Faster"
-                        image={Flash}
+                        image={selectedFrame === 2 ? FlashAnimated : Flash}
                         onClickFrame={() => onClickFrame(2)}
+                        selected={selectedFrame === 2 ? true : false}
                     />
                     <br />
                     <MuiButton
                         label="secure"
-                        image={Lock}
+                        image={selectedFrame === 3 ? LockAnimated : Lock}
                         onClickFrame={() => onClickFrame(3)}
+                        selected={selectedFrame === 3 ? true : false}
                     />
                     <br />
                     <MuiButton
                         label="social-friendly"
-                        image={Social}
+                        image={selectedFrame === 4 ? SocialAnimated : Social}
                         onClickFrame={() => onClickFrame(4)}
+                        selected={selectedFrame === 4 ? true : false}
                     />
                     <br />
                 </Grid>

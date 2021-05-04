@@ -5,6 +5,8 @@ import BackgroundTitle from '../../assets/backgroundTitle.svg';
 import BackgroundTitleResponsive from '../../assets/backgroundTitleResponsive.svg';
 import Container from '@material-ui/core/Container';
 import More from '../More/More';
+import MoreResponsive from '../More/MoreResponsive';
+import Hidden from '@material-ui/core/Hidden';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         title: {
@@ -45,7 +47,12 @@ const Home = () => {
             </section>
             <section className={classes.more}>
                 <Container>
-                    <More />
+                    <Hidden xsDown>
+                        <More />
+                    </Hidden>
+                    <Hidden smUp>
+                        <MoreResponsive />
+                    </Hidden>
                 </Container>
             </section>
         </div>
