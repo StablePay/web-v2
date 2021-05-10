@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme: Theme) =>
             '&:hover': {
                 backgroundColor: '#f95151',
             },
-
+            boxShadow: '0px 4px 11px rgba(0, 0, 0, 0.25)',
             [theme.breakpoints.only('lg')]: {
                 marginLeft: 50,
             },
@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme: Theme) =>
             '&:hover': {
                 backgroundColor: '#5e68f0',
             },
+            boxShadow: '0px 4px 11px rgba(0, 0, 0, 0.25)',
             color: '#fff',
             padding: 15,
 
@@ -97,7 +98,11 @@ export default function Title() {
                             </Button>
                         </Grid>
                         <Grid item xs={6}>
-                            <Button fullWidth className={classes.button2}>
+                            <Button
+                                href="#moreInfo"
+                                fullWidth
+                                className={classes.button2}
+                            >
                                 learn more
                             </Button>
                         </Grid>
