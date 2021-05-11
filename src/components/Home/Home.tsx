@@ -10,6 +10,7 @@ import More from '../More/More';
 import MoreResponsive from '../More/MoreResponsive';
 import Hidden from '@material-ui/core/Hidden';
 import LayerSDK from '../LayerSDK/LayerSDK';
+import Grants from '../Grants/Grants';
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         title: {
@@ -65,6 +66,11 @@ const Home = () => {
             <section className={classes.sdk}>
                 <Container>
                     <LayerSDK />
+                </Container>
+            </section>
+            <section className={classes.more}>
+                <Container>
+                    <Grants />
                 </Container>
             </section>
         </div>
