@@ -1,7 +1,6 @@
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import logo from '../../assets/logoWhite.svg';
 
@@ -29,7 +28,7 @@ export default function Navbar() {
         <div className={classes.root}>
             <AppBar position="static" color="transparent" elevation={0}>
                 <Toolbar>
-                    <Typography variant="h6" className={classes.title}>
+                    <a className={classes.title} href="/">
                         <img
                             src={logo}
                             className="StablePay-logo"
@@ -37,7 +36,7 @@ export default function Navbar() {
                             width="150"
                             height="100"
                         />
-                    </Typography>
+                    </a>
                     <Button
                         className={classes.menuButton}
                         href="https://stablepay.vercel.app/"

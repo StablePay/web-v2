@@ -140,7 +140,8 @@ export default function SocialMedia() {
                     <div className={classes.paper}>
                         {' '}
                         <a
-                            href="https://certificate.quantstamp.com/full/stable-pay"
+                            href="/terms"
+                            target="blank"
                             className={classes.paper}
                         >
                             Terms of Service
@@ -151,6 +152,7 @@ export default function SocialMedia() {
                     <div className={classes.paper}>
                         Built on Ethereum <br />
                         <a
+                            target="blank"
                             href="https://certificate.quantstamp.com/full/stable-pay"
                             className={classes.paper}
                         >
